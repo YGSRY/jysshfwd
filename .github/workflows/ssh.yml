@@ -19,11 +19,11 @@ jobs:
     - name: Set up Android NDK
       run: |
         # 设置 NDK 版本
-        export NDK_VERSION=25.2.9519680
+        export NDK_VERSION=r23b  # 更新为有效版本
         export ANDROID_NDK_HOME=$HOME/android-ndk
         mkdir -p $ANDROID_NDK_HOME
-        wget https://dl.google.com/android/repository/android-ndk-$NDK_VERSION-linux-x86_64.zip
-        unzip android-ndk-$NDK_VERSION-linux-x86_64.zip -d $ANDROID_NDK_HOME
+        wget https://dl.google.com/android/repository/android-ndk-$NDK_VERSION-linux.zip
+        unzip android-ndk-$NDK_VERSION-linux.zip -d $ANDROID_NDK_HOME
         export PATH=$ANDROID_NDK_HOME/android-ndk-$NDK_VERSION:$PATH
         echo "NDK version $NDK_VERSION is set up"
 
